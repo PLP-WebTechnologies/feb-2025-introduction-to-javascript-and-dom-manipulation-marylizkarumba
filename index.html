@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: background-color 0.5s;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .highlighted {
+            background-color: #ffffcc;
+            font-weight: bold;
+        }
+        #colorControls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+        }
+        #elements-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .new-element {
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Interactive JavaScript Demo</h1>
+        <p>This page demonstrates dynamic DOM manipulation with JavaScript</p>
+    </header>
+
+    <section>
+        <h2>Text Content Manipulation</h2>
+        <p id="changeable-text">This text can be changed dynamically.</p>
+        <button id="change-text-btn">Change Text</button>
+        <button id="reset-text-btn">Reset Text</button>
+    </section>
+
+    <section>
+        <h2>CSS Style Modification</h2>
+        <p>Change the page background color:</p>
+        <div id="colorControls">
+            <div class="color-btn" style="background-color: #f8f9fa;" data-color="#f8f9fa"></div>
+            <div class="color-btn" style="background-color: #e3f2fd;" data-color="#e3f2fd"></div>
+            <div class="color-btn" style="background-color: #f1f8e9;" data-color="#f1f8e9"></div>
+            <div class="color-btn" style="background-color: #fff3e0;" data-color="#fff3e0"></div>
+        </div>
+        <p id="style-target">Click the button below to highlight this text.</p>
+        <button id="highlight-btn">Toggle Highlight</button>
+    </section>
+
+    <section>
+        <h2>Adding and Removing Elements</h2>
+        <button id="add-element-btn">Add Element</button>
+        <button id="remove-element-btn">Remove Last Element</button>
+        <div id="elements-container"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 JavaScript DOM Manipulation Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
